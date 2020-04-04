@@ -82,7 +82,9 @@ Quick demo of using tree-sitter-clojure to highlight code in neovim (>= 0.5)
 ## Thanks
 
 * bfredl - neovim and tree-sitter work
+* guns - vim-clojure-static
 * jacobsimpson - nvim-example-lua-plugin
 * kolja - repl-alliance
+* kotarak - vimclojure
 * morhetz - gruvbox
 * SevereOverfl0w - tree-sitter and vim info
