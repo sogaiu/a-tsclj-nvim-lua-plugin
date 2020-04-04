@@ -1,6 +1,6 @@
 # a-tsclj-nvim-lua-plugin
 
-Quick demo of using tree-sitter-clojure to highlight code in neovim (>= 0.5)
+A demo of using tree-sitter-clojure to highlight code in neovim (>= 0.5)
 
 ## Prerequisites
 
@@ -20,25 +20,29 @@ Quick demo of using tree-sitter-clojure to highlight code in neovim (>= 0.5)
   clojure.core (assuming clojure source lives under ~/src):
 
   ```
-  $ npx tree-sitter parse ~/src/clojure/src/clj/clojure/core.clj
+  npx tree-sitter parse ~/src/clojure/src/clj/clojure/core.clj
   ```
 
   This should have prepared a `~/.tree-sitter` directory and copied a
   `clojure.so` (or .dynlib or .dll) file to live under
   `~/.tree-sitter/bin`.
 
-  The vim runtimepath is used to locate the .so|.dynlib|.dll.  This can
-  be achieved in a variety of ways, but here is one way:
-
-* Symlink `~/.tree-sitter/bin` to a place such as
-  `~/.config/nvim/parser`.  Here `~/.config/nvim` is assumed to be on
-  the vim runtimepath, substitute something else if this particular
-  choice is undesirable.
-
-* Clone this repository:
+  The vim runtimepath is used to locate the .so|.dynlib|.dll file, so
+  to arrange for that to succeed, one could symlink
+  `~/.tree-sitter/bin` to a place such as `~/.config/nvim/parser`:
 
   ```
-  $ git clone https://github.com/sogaiu/a-tsclj-nvim-lua-plugin
+  cd ~/.config/nvim
+  ln -s ~/.tree-sitter/bin parser # assuming nothing named parser exists
+  ```
+
+  Here `~/.config/nvim` is assumed to be on the vim runtimepath,
+  substitute something else if this particular choice is undesirable.
+
+* Clone this repository somewhere appropriate:
+
+  ```
+  git clone https://github.com/sogaiu/a-tsclj-nvim-lua-plugin
   ```
 
 * Start neovim with the cloned directory on the vim runtime path:
@@ -59,20 +63,25 @@ Quick demo of using tree-sitter-clojure to highlight code in neovim (>= 0.5)
   :edit ~/src/clojure/src/clj/clojure/core.clj
   ```
 
-  The file should look pretty plain (as in, color-less).
+  The file should look pretty plain, i.e. no syntax highlighting.
 
 ## Demo
 
 * Use tree-sitter-clojure to highlight the buffer by entering
   `<M-C-H>` (see `plugin/a-tsclj-nvim-lua-plugin.vim` if another key
-  sequence needs to be used).  Alternatively, one can `:lua
-  trsi:highlight_clojure()<CR>`.
+  sequence needs to be used).
+
+  Alternatively, one can:
+
+  ```
+  :lua trsi:highlight_clojure()<CR>
+  ```
 
   The text `tree-sitter-clojure detected` should appear at the bottom
   of the screen if all went well, and the buffer should now have more
   color in it.
 
-![screenshot](a-tsclj-nvim-lua-plugin.png)
+  [screenshot](a-tsclj-nvim-lua-plugin.png)
 
 ## Hacking
 
