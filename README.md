@@ -72,7 +72,7 @@ Quick demo of using tree-sitter-clojure to highlight code in neovim (>= 0.5)
   of the screen if all went well, and the buffer should now have more
   color in it.
 
-[screenshot](a-tsclj-nvim-lua-plugin.png)
+![screenshot](a-tsclj-nvim-lua-plugin.png)
 
 ## Hacking
 
