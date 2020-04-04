@@ -23,12 +23,12 @@ Quick demo of using tree-sitter-clojure to highlight code in neovim (>= 0.5)
   $ npx tree-sitter parse ~/src/clojure/src/clj/clojure/core.clj
   ```
 
-This should have prepared a `~/.tree-sitter` directory and copied a
-`clojure.so` (or .dynlib or .dll) file to live under
-`~/.tree-sitter/bin`.
+  This should have prepared a `~/.tree-sitter` directory and copied a
+  `clojure.so` (or .dynlib or .dll) file to live under
+  `~/.tree-sitter/bin`.
 
-The vim runtimepath is used to locate the .so|.dynlib|.dll.  This can
-be achieved in a variety of ways, but here is one way:
+  The vim runtimepath is used to locate the .so|.dynlib|.dll.  This can
+  be achieved in a variety of ways, but here is one way:
 
 * Symlink `~/.tree-sitter/bin` to a place such as
   `~/.config/nvim/parser`.  Here `~/.config/nvim` is assumed to be on
@@ -59,7 +59,7 @@ be achieved in a variety of ways, but here is one way:
   :edit ~/src/clojure/src/clj/clojure/core.clj
   ```
 
-The file should look pretty plain (as in, color-less).
+  The file should look pretty plain (as in, color-less).
 
 ## Demo
 
@@ -68,9 +68,9 @@ The file should look pretty plain (as in, color-less).
   sequence needs to be used).  Alternatively, one can `:lua
   trsi:highlight_clojure()<CR>`.
 
-The text `tree-sitter-clojure detected` should appear at the bottom of
-the screen if all went well, and the buffer should now have more color
-in it.
+  The text `tree-sitter-clojure detected` should appear at the bottom
+  of the screen if all went well, and the buffer should now have more
+  color in it.
 
 ## Hacking
 
@@ -79,5 +79,7 @@ in it.
 
 ## Thanks
 
-* jacobsimpson - nvim-example-lua-plugin 
+* bfredl - neovim and tree-sitter work
+* jacobsimpson - nvim-example-lua-plugin
+* kolja - repl-alliance
 * SevereOverfl0w - tree-sitter and vim info
