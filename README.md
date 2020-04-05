@@ -10,7 +10,7 @@ A demo of using tree-sitter-clojure to highlight code in neovim (>= 0.5)
 ## Prepare
 
 * Install neovim (>= 0.5) or rather the master branch of neovim as 0.5
-  is not released yet.
+  is not released yet (tested with 30a6e374).
 
 * Follow the instructions through "Initial Setup" step of
   [tree-sitter-clojure](https://github.com/sogaiu/tree-sitter-clojure).
