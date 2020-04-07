@@ -1,3 +1,3 @@
-lua trsi = require("trsiclj")
+lua trsiclj = require("trsiclj")
 
-nmap <M-C-H> :lua trsi:highlight_clojure()<CR>
+nmap <M-C-H> :lua trsiclj:highlight_clojure()<CR>

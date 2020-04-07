@@ -1,4 +1,4 @@
-TrSi = {}
+TrSiClj = {}
 
 local default_query = [[
 (ERROR) @Error
@@ -61,7 +61,7 @@ local default_query = [[
     "#'" @SpecialChar))
 ]]
 
-function TrSi:has_parser(lang)
+function TrSiClj:has_parser(lang)
   local path_pat = 'parser/' .. lang .. '.*'
   local check = #vim.api.nvim_get_runtime_file(path_pat, false) > 0
   if check then
@@ -72,7 +72,7 @@ function TrSi:has_parser(lang)
   return check
 end
 
-function TrSi:init_parser(lang)
+function TrSiClj:init_parser(lang)
   self.lang = lang
   self.parser = nil
   if self:has_parser(lang) then
@@ -89,9 +89,9 @@ function TrSi:init_parser(lang)
   return self.parser
 end
 
-function TrSi:highlight_clojure(query, bufnr)
+function TrSiClj:highlight_clojure(query, bufnr)
   if not self.parser then
-    local parser = TrSi:init_parser("clojure")
+    local parser = TrSiClj:init_parser("clojure")
     if not parser then
       return nil
     end
@@ -112,4 +112,4 @@ function TrSi:highlight_clojure(query, bufnr)
   return self.highlighter
 end
 
-return TrSi
+return TrSiClj

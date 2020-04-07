@@ -74,7 +74,7 @@ A demo of using tree-sitter-clojure to highlight code in neovim (>= 0.5)
   Alternatively, one can:
 
   ```
-  :lua trsi:highlight_clojure()<CR>
+  :lua trsiclj:highlight_clojure()<CR>
   ```
 
   The text `tree-sitter-clojure detected` should appear at the bottom
